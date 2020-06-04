@@ -31,9 +31,14 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
+                    <a id="loginButton" role="button">
+                        <span class="fa fa-sign-in"></span>Login
+                    </a>
+                    <!--
                     <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
+                    -->
                 </span>
             </div>
         </div>
@@ -88,9 +93,14 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
+                    <a class="btn btn-warning btn-block nav-link btn-sm" role="button" id="reserveButton" title="Or Call us at +852 12345678">
+                        Reserve Table
+                    </a>
+                    <!--
                     <a class="btn btn-warning btn-block nav-link btn-sm" data-toggle="modal" data-target="#reservetable">
                         Reserve Table
                     </a>
+                    -->
                 </div>
                 <!--
                 <div class="col-12 col-sm align-self-center">
@@ -390,9 +400,17 @@
                 $('#carouselButton').children('span').removeClass('fa-play');
                 $('#carouselButton').children('span').addClass('fa-pause');
             }
+        });
+        $('#reserveButton').click(function(){
+            $('#reservetable').modal('show');
+        });
+        $('#loginButton').click(function(){
+            $('#loginModal').modal('show');
         }); 
     });
 </script>
+
+
 <!--
 <script>
         $(document).ready(function(){
